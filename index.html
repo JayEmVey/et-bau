@@ -1,5 +1,6 @@
 <html>
   <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link
       href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
       rel="stylesheet"
@@ -15,57 +16,22 @@
       src="https://vtij.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-onpk8x/b/7/c95134bc67d3a521bb3f4331beb9b804/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=35e62aeb"
     ></script>
 
-    <script type="text/javascript">
-      window.ATL_JQ_PAGE_PROPS = $.extend(window.ATL_JQ_PAGE_PROPS, {
-        //Button1-Function CollectorID = 0307283d
-        "0307283d": {
-          triggerFunction: function (showCollectorDialog) {
-            //Requries that jQuery is available!
-            jQuery("#Button1").click(function (e) {
-              e.preventDefault();
-              showCollectorDialog();
-            });
-          },
-          //Define some fields
-          fieldValues: {
-            summary: "Issue-Title of Button 1",
-            description: "Issue-Description of Button 1",
-
-            // hidden field value
-            priority: "3",
-          },
-        },
-
-        //Button2-Function CollectorID = b728b697
-        "35e62aeb": {
-          triggerFunction: function (showCollectorDialog) {
-            //Requries that jQuery is available!
-            jQuery("#Button2").click(function (e) {
-              e.preventDefault();
-              showCollectorDialog();
-            });
-          },
-          //Define some fields
-          fieldValues: {
-            summary: "Issue-Title of Button 2",
-            description: "Issue-Description of Button 2",
-
-            // hidden field value
-            priority: "3",
-          },
-        },
-      });
-    </script>
+    <script type="text/javascript" src="script.js"></script>
   </head>
   <body>
-    
-    <button class="mdc-button foo-button" id="Button2">
-      <div class="mdc-button__ripple"></div>
-      <span class="mdc-button__label">Create a BAU Story</span>
-    </button>
-    <button class="mdc-button foo-button" id="Button1">
-      <div class="mdc-button__ripple"></div>
-      <span class="mdc-button__label">Create a BAU Task</span>
+    <button class="mdc-button mdc-button--raised mdc-button--leading" id="Button2">
+      <span class="mdc-button__ripple"></span>
+      <i class="material-icons mdc-button__icon" aria-hidden="true"
+        >add</i
+      >
+      <span class="mdc-button__label">BAU Story</span>
+    </button> or|
+    <button class="mdc-button mdc-button--raised mdc-button--leading" id="Button1">
+      <span class="mdc-button__ripple"></span>
+      <i class="material-icons mdc-button__icon" aria-hidden="true"
+        >add</i
+      >
+      <span class="mdc-button__label">BAU Task</span>
     </button>
   </body>
 </html>
